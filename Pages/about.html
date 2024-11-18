@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page UI GOTOZ/About</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/otherpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -12,16 +17,187 @@
             <div class="logo-img-div">
                 <img src="../Assets/Group 179.png" alt="">
             </div>
-            <button class="lang-btn"><img src="../Assets/Component 3.png" alt="language">English <img src="../Assets/Symbol.png" alt=""></button>
+            <button class="lang-btn"><img class="lang-img" src="../Assets/Component 3.png" alt="language">English <img class="lang-img2"  src="../Assets/Symbol.png" alt=""></button>
         </div>
         <ul class="nav-links-div">
-            <li>Home</li>
-            <a href="Pages/about.html"><li>About Us</li></a>
-            <li>Services <img src="../Assets/Symbol.png" alt=""></li>
-            <li>Pages <img src="../Assets/Symbol.png" alt=""></li>
-            <li>Contact Us</li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="services.html">
+                    Services <img src="../Assets/Symbol.png" alt="Dropdown Icon">
+                </a>
+                <ul class="hoverdetails">
+                    <div class="inner-hover">
+                        <li><a href="#">Transforming Business with the Power of AI</a></li>
+                        <li><a href="#">Grow Your Business with our SEO</a></li>
+                        <li><a href="#">Bringing Imagination to Reality with AR/VR</a></li>
+                        <li><a href="#">Boost Your Brand with Targeted Digital Marketing</a></li>
+                        <li><a href="#">Your Brand, Straight to Their Inbox</a></li>
+                    </div>
+                     </ul>
+            </li>
+            <li>
+                <a href="products.html">
+                    Pages <img src="../Assets/Symbol.png" alt="Dropdown Icon">
+                </a>
+                <ul class="hoverdetails">
+                    <div class="inner-hover">
+                        <li><a href="#">Engage Smarter with Chatbot Tech AI</a></li>
+                        <li><a href="#">AI-Powered Insights for Student Safety and Progress</a></li>
+                        <li><a href="#">Streamline Visitor Access with Smart Management</a></li>
+                        <li><a href="#">Modern Invitations for a Connected World</a></li>
+                    </div>
+                        </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        
+        <div class="responsive-nav">
+            <button onclick="togglebtn()"><i class="ri-menu-line"></i></button> 
+        </div>
+        <!-- <div class="display-hide">
+
+        </div> -->
+        <div class="mobile-bar">
+            <div class="logo-img-div white-background">
+                <img src="../Assets/Group 179.png" alt="">
+            </div>
+            <ul class="mobile-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a> <img class="rotate" src="../Assets/Symbol.png" alt=""></li>
+                <li><a href="products.html">Pages</a> <img class="rotate" src="../Assets/Symbol.png" alt=""></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <section id="about">
+        <div id="header-nav">
+            <h1>About Company</h1>
+            <p><a href="">Home <img class="rotate-2" src="../Assets/Symbol.png" alt=""></a>About Company</p>
+            <img class="grfty-1" src="../Assets/cta-right-particle-1.png.png" alt="">
+            <img class="grfty-2" src="../Assets/round-particle.png" alt="">
+        </div>
+        <div class="abt-container">
+            <div class="abt-image-container">
+                <div class="image-item-1">
+                  <img class="about-image" src="../Assets/about-image-2.png" alt="Person working at a desk">
+                  <img class="about-image-2" src="../Assets/about-image-3.png" alt="Woman working at a computer">
+                
+                </div>
+                <div class="image-item-2">
+                  <img class="about-image-3" src="../Assets/about-image-1.png" alt="Smiling person with a laptop">
+                  <img class="about-image-2" src="../Assets/about-image-4.png" alt="Man focused on work at a desk">
+                
+                </div>
+                
+              </div>
+            <div class="abt-text-content">
+                <p class="back-groundclr-3">About Company</p>
+              <h1 class="head-abt">Driving Innovation,<br>Delivering Results</h1>
+              <p class="about-para">At GOTOZ, we deliver smart, scalable technology solutions that transform businesses and drive growth. Partner with us to unlock new possibilities.</p>
+              <div class="features">
+                <div class="feature-details">
+                  <img src="../Assets/icons/tabler_settings-cog.png" alt="">
+                  <div class="feature-text">
+                    <h4>Technology Experts</h4><p>Our tech experts turn bold ideas into powerful solutions, driving innovation and transformation.</p>
+                  </div>
+                </div>
+                <div class="feature-details">
+                    <img src="../Assets/icons/prime_microchip-ai.png" alt="">
+                  <div class="feature-text">
+                    <h4>AI Experienced</h4><p>AI experts transforming data into intelligent solutions that power your growth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="TEAM">
+            <p class="back-groundclr-3">About Company</p>
+            <h1>We Have Professional Creative Team</h1>
+            <div class="team-profile">
+                <img src="../Assets/TEAM-profile/bug-develop.png" alt="">
+                <img src="../Assets/TEAM-profile/abinaya.png" alt="">
+                <img src="../Assets/TEAM-profile/boost.png" alt="">
+                <img src="../Assets/TEAM-profile/balaji.png" alt="">
+                <img src="../Assets/TEAM-profile/teammate.png" alt="">
+                <img src="../Assets/TEAM-profile/mama.png" alt="">
+                <img src="../Assets/TEAM-profile/tamil.png" alt="">
+                <img src="../Assets/TEAM-profile/teammate2.png" alt="">
+                <img src="../Assets/TEAM-profile/shanmugam.png" alt="">
+                <img src="../Assets/TEAM-profile/blankscreen.png" alt="">
+            </div>
+        </div>
+        <div class="QUESTIONS-ASKED">
+            <h1>Frequently asked questions</h1>
+            <p>Different layouts and styles for team sections.</p>
+            <div class="questions-area">
+                <div class="questions">
+                    <div class="q-head">
+                        <h4>Where do I usually find FAQs in a page?</h4>
+                        <button class="drop-btn" onclick="answershow(this)"><img class="q-dropdown" src="../Assets/Symbol-3.png" alt=""></button>
+                    </div>
+                    <p class="q-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto minus provident cupiditate ipsum ex dolor aspernatur odio suscipit? Aliquid.</p>
+                </div>
+                <div class="questions">
+                    <div class="q-head">
+                        <h4>Where do I usually find FAQs in a page?</h4>
+                        <button class="drop-btn" onclick="answershow(this)"><img class="q-dropdown" src="../Assets/Symbol-3.png" alt=""></button>
+                    </div>
+                    <p class="q-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto minus provident cupiditate ipsum ex dolor aspernatur odio suscipit? Aliquid.</p>
+                </div>
+                <div class="questions">
+                    <div class="q-head">
+                        <h4>Where do I usually find FAQs in a page?</h4>
+                        <button class="drop-btn" onclick="answershow(this)"><img class="q-dropdown" src="../Assets/Symbol-3.png" alt=""></button>
+                    </div>
+                    <p class="q-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto minus provident cupiditate ipsum ex dolor aspernatur odio suscipit? Aliquid.</p>
+                </div>
+                <div class="questions">
+                    <div class="q-head">
+                        <h4>Where do I usually find FAQs in a page?</h4>
+                        <button class="drop-btn" onclick="answershow(this)"><img class="q-dropdown" src="../Assets/Symbol-3.png" alt=""></button>
+                    </div>
+                    <p class="q-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto minus provident cupiditate ipsum ex dolor aspernatur odio suscipit? Aliquid.</p>
+                </div>
+            </div>
+            <p>Can't find an answer? <a class="colorblue" href="">Email Us</a></p>
+        </div>
+        <div class="project-count-down">
+            <div class="countdown-image-div">
+                <img src="../Assets/count-down.png.png" alt="">
+            </div>
+            <img class="pos-img1" src="../Assets/count-down-bottom.png.png" alt="">
+            <img class="pos-img2" src="../Assets/count-down-top.png.png" alt="">
+            <div class="count-down-details">
+                <div class="count-down">
+                    <img src="../Assets/icons/Overlay.png" alt="">
+                    <h2>96327+</h2>
+                    <p>Daily Active Users</p>
+                </div>
+                <div class="count-down">
+                    <img src="../Assets/icons/Overlay-1.png" alt="">
+                    <h2>78630+</h2>
+                    <p>Project Complate</p>
+                </div>
+                <div class="count-down">
+                    <img src="../Assets/icons/Overlay-2.png" alt="">
+                    <h2>56326+</h2>
+                    <p>Download Software</p>
+                </div>
+                <div class="count-down">
+                    <img src="../Assets/icons/Overlay-3.png" alt="">
+                    <h2>63020+</h2>
+                    <p>5 Star Rating Reviews</p>
+                </div>
+            </div>
+            <img class="map-background" src="../Assets/map-backround.png" alt="">
+        </div>
+    </section>
+
+
+
 
 
     <footer>
@@ -29,39 +205,41 @@
             <div class="detail-upper-div">
                 <img src="../Assets/Group 179.png" alt="">
                 <p class="color-4">Sed ut perspiciatis undmnis iste natus error sit voluptatem accusantium dolore udantiuy totam rem aperiam.</p>
-                    <p class="call-number"><img src="../Assets/icons/call-icon.png" alt="call"> +012 (345) 678 99</p>
+                    <a href=""><p class="call-number"><img src="../Assets/icons/call-icon.png" alt="call"> +012 (345) 678 99</p></a>
             </div>
             <div class="detail-upper-div">
                 <h3>Resources</h3>
                 <ul>
-                    <li><i class="arrow"></i>Saas Development</li>
-                    <li><i class="arrow"></i>Our Products</li>
-                    <li><i class="arrow"></i>User Strategy</li>
-                    <li><i class="arrow"></i>Blogs & Guides</li>
-                    <li><i class="arrow"></i>Premium Support</li>
+                    <li><i class="arrow"></i><a href="">Saas Development</a></li>
+                    <li><i class="arrow"></i><a href="">Our Products</a></li>
+                    <li><i class="arrow"></i><a href="">User Strategy</a></li>
+                    <li><i class="arrow"></i><a href="">Blogs & Guides</a></li>
+                    <li><i class="arrow"></i><a href="">Premium Support</a></li>
                 </ul>
             </div>
             <div class="detail-upper-div">
                 <h3>Company</h3>
                 <ul>
-                    <li><i class="arrow"></i>About Landio</li>
-                    <li><i class="arrow"></i>Contact & Support</li>
-                    <li><i class="arrow"></i>Success History</li>
-                    <li><i class="arrow"></i>Setting & Privacy</li>
-                    <li><i class="arrow"></i>Company History</li>
+                    <li><i class="arrow"></i><a href="">About Landio</a></li>
+                    <li><i class="arrow"></i><a href="">Contact & Support</a></li>
+                    <li><i class="arrow"></i><a href="">Success History</a></li>
+                    <li><i class="arrow"></i><a href="">Setting & Privacy</a></li>
+                    <li><i class="arrow"></i><a href="">Company History</a></li>
                 </ul>
             </div>
             <div class="detail-upper-div">
                 <h3>Follow On</h3>
                 <div class="social-icons">
-                    <img src="../Assets/icons/facebook.png" alt="">
-                    <img src="../Assets/icons/twitter.png" alt="">
-                    <img src="../Assets/icons/youtube.png" alt="">
-                    <img src="../Assets/icons/linkedin.png" alt="">
+                    <a href=""><img src="../Assets/icons/facebook.png" alt=""></a>
+                    <a href=""><img src="../Assets/icons/twitter.png" alt=""></a>
+                    <a href=""><img src="../Assets/icons/youtube.png" alt=""></a>
+                    <a href=""><img src="../Assets/icons/linkedin.png" alt=""></a>
                 </div>
-                <p class="copyright">@ 2024 <span>Gotoz.</span> <br>All Rights Reserved</p>
+                <p class="copyright">@ 2024 <span><a href="">Gotoz.</a></span> <br>All Rights Reserved</p>
             </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
