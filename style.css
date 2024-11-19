@@ -959,4 +959,10 @@ footer{
     .detail-upper-div h3{
         font-size: 10px;
     }
+    .grid-heads{
+        gap: 10px;
+    }
+    .grid-heads p{
+        font-size: 10px;
+    }
  }
