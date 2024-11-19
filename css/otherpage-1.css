@@ -185,10 +185,227 @@
 
 #OUR-Products{
     width: 90%;
-    height: 200px;
-    margin: 0 auto;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Products-main{
+    /* height: 80vh; */
+    /* background-color: wheat; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.pages-details{
+    width: 40%;
+    height: 100%;
+    /* background-color: #0056b3; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.pages-details h1{
+    text-transform: capitalize;
+    font-size: 35px;
+}
+.pages-details h1 span{
+    background: linear-gradient(to right, #0055FF, #E40050);
+    -webkit-background-clip:text;
+    color: transparent;
+}
+.page-short-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* background-color: black; */
+   
+}
+.inner-page-info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    gap: 30px;
+    padding: 20px ;
+    border-radius: 5px;
+    border: 1px solid #2B70FA;
+    transition: 0.2s;
+    margin-left: 20px;
+}
+.info-icon{
+    width: 55px;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #2B70FA;
+    padding: 10px;
+}
+.info-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.details-of-pages{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+.details-of-pages p{
+    font-family:  "Space Grotesk", sans-serif;
+    /* display: none; */
+    /* width: 0; */
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+    font-size: 15px;
+
+}
+.details-of-pages h4{
+    font-size: 20px;
+    font-family:  "Space Grotesk", sans-serif;
+    transition: 0.2s
+
+}
+.inner-page-info:hover .details-of-pages p{
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+.inner-page-info:hover .details-of-pages h4{
+    font-size: 15px;
+    color: white;
+}
+.inner-page-info:hover{
+    background-color: #0055FF;
+}
+.page-image-div{
+    width: 40%;
+    height: 70%;
     /* background-color: green; */
 }
+.page-image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.page-open-btn{
+    width:200px;
+    height: 50px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+.page-open-btn:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 20px -10px black;
+    transform: scale(1.03);
+}
+.page-open-btn:active{
+    background-color: red;
+    color: white;
+}
+.coloumn-reverse{
+    flex-direction: row-reverse;
+}
+/*  OUR-SERVICES-SECTION CSS */
+
+#service-page{
+    width: 90%;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.service-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    /* background-color: yellow; */
+}
+.service-imgage-main-div{
+    width: 40%;
+    height: 70%;
+}
+.service-imgage-main-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ser-details-Main{
+    width: 40%;
+    /* height: 100%; */
+    /* background-color: #0056b3; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.ser-details-Main h1{
+    font-size: 50px;
+}
+#accordion{
+    width:100%;
+    /* background-color: #0055ff49; */
+}
+#accordion li{
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 20px -10px black;
+    background-color: #ffffff;
+    transition:all 0.2s;
+}
+#accordion li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.Symbol-4{
+    transform: rotate(0deg);
+    transition: height 0.2s;
+    height: 10px;
+}
+#accordion label + input[type="radio"]{
+    display: none;
+}
+#accordion .ser-para{
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+} 
+#accordion label + input[type="radio"]:checked + .ser-para{
+    max-height: 200px;
+}
+#accordion li:has(input[type="radio"]:checked) {
+    background-color: #0055FF;
+    color: white;
+}
+
+
+
 
 
 @media (max-width: 700px) {
@@ -286,5 +503,111 @@
     .error-details button {
         font-size: 6px;
         padding: 8px 20px; /* Adjust padding for smaller buttons */
+    }
+
+
+    /*OUR -PRODUCTS MEDIA QUERY CSS*/
+    .Products-main{
+        flex-direction: column-reverse;
+    }
+    .coloumn-reverse{
+        flex-direction: column-reverse;
+    }
+    .pages-details{
+        width: 100%;
+        align-items: center;
+    }
+    .inner-page-info{
+        width: 80%;
+        margin: 0;
+        gap: 20px;
+        padding: 10px;
+    }
+    .pages-details h1{
+        font-size: 15px;
+        text-align: center;
+    }
+    .details-of-pages h4{
+        font-size: 12px;
+    }
+    .details-of-pages p{
+        font-size: 6px;
+    }
+    .inner-page-info:hover .details-of-pages h4 {
+        font-size: 8px;
+        color: white;
+    }
+    .inner-page-info:hover .details-of-pages p {
+        width: 100%;
+        height: 25px;
+        color: white;
+    }
+    .info-icon {
+        width: 35px;
+        height: 30px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border: 1px solid #2B70FA;
+        padding: 5px;
+    }
+    .page-short-info{
+        align-items: center;
+    }
+    .page-open-btn {
+        width: 100px;
+        height: 24px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 3px 3px;
+        border-radius: 5rem;
+        cursor: pointer;
+        font-size: 11px;
+        transition: all 0.3s;
+    }
+    .page-image-div{
+        width: 80%;
+    }
+    
+
+    /*SERVICE SECTION MEDIA CSS*/
+
+    #service-page{
+        gap: 30px;
+    }
+    
+    .service-section{
+        flex-direction: column;
+    }
+    .ser-details-Main{
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+    .ser-details-Main h1 {
+        font-size: 20px;
+        text-align: center;
+        
+    }
+    .service-imgage-main-div{
+        width: 100%;
+    }
+    #accordion{
+        width: 80%;
+    }
+    #accordion li label {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    #accordion .ser-para{
+        padding: 0 6px;
+    }
+    .ser-para p{
+        font-size: 10px;
     }
 }
