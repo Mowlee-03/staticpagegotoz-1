@@ -887,11 +887,27 @@ footer{
 
     .inner-footer {
         display: grid;
-        grid-template-columns: 2fr 1fr;  /* 2:1 ratio */
-        gap: 20px;
+        grid-template-rows: auto auto auto; /* Three rows */
+        grid-template-columns: 1fr 1fr; /* Two columns */ /* 2:1 ratio */
+        gap: 40px;
         width: 90%;
     }
+     .item-1 {
+        margin: 0 auto;
+        grid-column: 1 / -1; 
+        
+    }
 
+    .item-4 {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .item-4 h3{
+        /* background-color: #007bff; */
+        padding-top: 5px;
+    }
     .detail-upper-div {
         width: 100%;  /* Ensures each section takes full width */
         padding-top:0;
@@ -904,18 +920,18 @@ footer{
     }
 
     .call-number {
-        font-size: 5px;
+        font-size: 12px;
         display: flex;
         align-items: center;
         gap: 5px;
     }
 
     .call-number img {
-        height: 8px;
+        height: 12px;
     }
 
     .color-4 {
-        font-size: 10px;
+        font-size: 12px;
         padding-top: 0px;
         text-align: center;
         line-height: 13px;
@@ -924,8 +940,8 @@ footer{
 
     .detail-upper-div ul {
         gap: 6px;
-        font-size: 6px;
-        text-align: center;
+        font-size: 10px;
+        text-align: start;
     }
 
     .detail-upper-div ul li {
@@ -938,22 +954,21 @@ footer{
     }
 
     .social-icons img {
-        height: 12px;
+        height: 25px;
     }
 
     .copyright {
-        text-align: center;
-        font-size: 5px;
-        padding-top: 20px;
+        text-align: end;
+        font-size: 10px;
     }
 
     .copyright span {
-        font-size: 6px;
+        font-size: 10px;
     }
     .arrow {
         border: solid;
         border-width: 0px 1px 1px 0;
-        padding: 1px;
+        padding: 2px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
     }

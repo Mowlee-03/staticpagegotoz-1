@@ -218,58 +218,78 @@
 .QUESTIONS-ASKED h1{
     font-size: 35px;
 }
+
+.FAQ{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.FAQ li:has(input[type="radio"]:checked) {
+    transform: scale(1.05);
+}
 .questions-area{
     width: 80%;
-    /* height: 200px; */
-    /* background-color: rgb(204, 204, 204); */
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     justify-content: center;
     gap: 30px;
-
 }
 .questions-inner-div{
     background-color: #009DFF;
 }
 .questions{
     width: 100%;
-    box-shadow: 1px 1px 20px -10px black;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    border: 1px solid #F2F4F8;
+    transition: 0.3s;
+    /* gap: 10px; */
 }
 .q-head{
     width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: gray; */
+    cursor: pointer;
+}
+.q-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
 }
 .drop-btn{
-    padding: 5px;
+    width: 30px;
+    height: 30px;
+    /* padding: 5px; */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     border: none;
-    transition: all 1s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: url(../Assets/Symbol-3.png);
+    background-repeat: no-repeat;
+    background-color: #EEF4FE;
+    background-size: 23px;
+    background-position: center;
 }
-.q-dropdown{
-    width: 30px;
+.questions.seeanswer{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px -5px black;
 }
-.q-answer {
-    max-height: 0; 
-    opacity: 0; 
-    overflow: hidden; 
-    transition: max-height 0.5s ease, opacity 0.5s ease; 
+.questions.seeanswer .q-answer{
+    max-height: 100px;
+}
+.questions.seeanswer .drop-btn{
+    background: url(../Assets/Symbol-2.png);
+    background-repeat: no-repeat;
+    background-color: #2B70FA;
+    background-size: 10px;
+    background-position: center;
 }
 
-.q-answer.seeanswer {
-    max-height: 200px;
-    opacity: 1; 
-}
 .colorblue{
     color: #007BFF;
 }
@@ -498,13 +518,13 @@
         }
     
         .QUESTIONS-ASKED h1 {
-            font-size: 15px; /* Slightly smaller font size */
+            font-size: 20px; /* Slightly smaller font size */
         }
         .QUESTIONS-ASKED p{
             font-size: 10px;
         }
         .questions-area {
-            width: 90%; /* Reduce width for mobile view */
+            width: 100%; /* Reduce width for mobile view */
             grid-template-columns: 1fr; /* Single column layout */
             gap: 20px; /* Smaller gap */
         }
@@ -514,9 +534,7 @@
         }
     
         .questions {
-            padding: 15px; /* Slightly larger padding for better touch interaction */
-            gap: 15px; /* Adjust gap for clarity */
-            box-shadow: 1px 1px 10px -5px black; /* Reduce shadow intensity */
+            padding: 15px;
         }
     
         .drop-btn {
@@ -527,20 +545,9 @@
             width: 10px; /* Slightly smaller dropdown icon size */
         }
     
-        .q-answer {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease, opacity 0.5s ease;
-        }
-    
-        .q-answer.seeanswer {
-            max-height: 150px; /* Reduce max height for smaller screens */
-            opacity: 1;
-            font-size: 10px;
-        }
+        
         .q-head h4{
-            font-size: 10px;
+            font-size: 12px;
         }
     
         .project-count-down {
