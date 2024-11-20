@@ -155,7 +155,7 @@
     height: 99%;
     background-color: #A195FF52;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     border-radius: 12px;
     opacity: 0;
     transition: 0.2s;

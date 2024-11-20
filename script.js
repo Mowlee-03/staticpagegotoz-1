@@ -23,3 +23,29 @@ function answershow(button) {
         buttonElement.style.backgroundColor = ""; // Reset to default background color
     }
 }
+
+const mainMenu = document.querySelector('.sticky');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        mainMenu.classList.add('slidedown');
+    } else {
+        mainMenu.classList.remove('slidedown');
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3, // Display 3 slides in a row
+      spaceBetween: 30, // Add spacing between slides
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, // Allow clickable pagination
+      },
+      breakpoints: {
+        700: {
+          slidesPerView: 3, // Show 1 slide on smaller screens
+          spaceBetween: 20, // Adjust spacing for smaller screens
+        },
+      },
+    });
+  });
