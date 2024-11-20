@@ -8,6 +8,9 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;color: black;
 }
@@ -488,7 +491,7 @@ footer{
 .color-4{
     color: #6E727D;
     line-height: 30px;
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 50px;
 }
 .detail-upper-div ul{
