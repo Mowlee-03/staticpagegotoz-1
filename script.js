@@ -39,4 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+const counters=document.querySelectorAll('.count')
+const container=document.querySelector('.company-short-details')
+
+  window.addEventListener('scroll',()=>{
+    if (window.scrollY>300) {
+      counters.forEach(counter=>{
+        counter.innerText=0
+        let count=0
+        function updateCount() {
+          const target =parseInt(counter.getAttribute('data-target'))
+          if (count < target) {
+            count++;
+            counter.innerText=count
+            setTimeout(updateCount,100)
+          }
+          else{
+            counter.innerText=target
+          }
+        }
+
+        updateCount();
+        
+      })
+    }
+  })
+
+
+
   

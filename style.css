@@ -106,7 +106,7 @@ nav{
     padding: 10px;
     z-index: 10; /* Ensures dropdown stays on top */
     width: 350px; /* Adjust as needed */
-    margin-top: 5px;
+    /* margin-top: 5px; */
     transition: 1s;
 }
 
@@ -234,7 +234,7 @@ nav{
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -247,6 +247,7 @@ nav{
     align-items: center;
     justify-content: space-around;
     padding: 20px 0px;
+    border-radius: 5px;
 }
 .count-details{
         text-align: center;
@@ -424,11 +425,15 @@ nav{
 .Technology-tools-icons{
     margin-top: 20px;
     width: 80%;
-    height: 300px;
     /* background-color: rgb(83, 245, 140); */
+    overflow: hidden;
+   
+}
+.Technology-icons-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 50px; 
+    animation: scroll-right-to-left 15s linear infinite; /* Infinite scrolling animation */
 }
 .Technology-icons-div{
     border-radius: 50%;
@@ -437,7 +442,7 @@ nav{
 }
 .Technology-icons-div img{
     width: 75px;
-    height: 85px;
+    height:75px;
 }
 .grafity-particle1{
     height: 160px;
@@ -458,6 +463,7 @@ nav{
     flex-direction: column;
     align-items: center;justify-content: space-between;
     text-align: center;
+    gap: 30px;
 }
 .swiper{
     width: 100%;
@@ -484,6 +490,7 @@ nav{
     background-color: #D3D4F8;
     padding: 5px 10px;
     border-radius: 10px;
+    color: #473BF0;
 }
 .empty-img{
     height: 400px;
@@ -860,6 +867,9 @@ footer{
     .Technology-icons-div img {
         width: 25px; /* Icon width for mobile */
         height: 25px; /* Icon height for mobile */
+    }
+    .Technology-icons-wrapper{
+        gap: 30px;
     }
     .grafity-particle1 {
         height: 65px;
