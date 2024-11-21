@@ -117,7 +117,17 @@ nav{
     font-size: small;
     padding: 10px 0px;
 }
-
+.inner-hover li{
+    padding: 10px;
+    border-radius: 5px;
+    transition:all ease-in-out 0.3s;
+}
+.inner-hover li:hover{
+    background-color: #007bff;
+}
+.inner-hover li:hover a{
+    color: white;
+}
 .inner-hover a {
     text-decoration: none;
     color: #949393;
@@ -201,28 +211,50 @@ nav{
     align-items: center;
     gap: 100px ;
 }
-.clients-logo{
-    /* width: 100%;      */
-    display: flex; 
-    justify-content: space-around;
-    gap: 20px;      
+.clients-logo-wrapper {
+    overflow: hidden;
+    width: 100%; 
+    /* background: #f9f9f9;  */
 }
-.clients-logo img{
-    height: 50px;
+
+.clients-logo {
+    display: flex;
+    align-items: center;
+    gap: 100px; 
+    animation: scroll-right-to-left 15s linear infinite; /* Infinite scrolling animation */
 }
+
+.clients-logo img {
+    height: 50px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+@keyframes scroll-right-to-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 .company-short-details{
-    width: 85%;
+    width: 90%;
     /* margin: 0 auto; */
-    height: 140px;
+    /* height: 140px; */
     border: 1px solid #C2C2C2;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px 0px;
+}
+.count-details{
+        text-align: center;
 }
 .count-details span{
     color: #473BF0;
     font-weight: 700;
-    font-size: 38px;
+    font-size: 58px;
 }
 .btn{
     padding: 10px 25px;
@@ -260,13 +292,15 @@ nav{
     height: 30px;
 }
 .tabpanel{
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 60px;
     height: 700px;
     /* background-color: rgb(218, 218, 218); */
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 .tabpannel-details{
     width: 250px;
@@ -281,9 +315,11 @@ nav{
 }
 .tabpannel-details li{
     display:flex;
-    gap: 10px;align-items: center;
+    gap: 20px;align-items: center;
     cursor: pointer;
     transition: 0.2s;
+    font-weight: 600;
+    font-size: 20px;
 }
 .tabpannel-details li:hover{
     color: #2B70FA;
@@ -293,9 +329,10 @@ nav{
 }
 .tabpannel-details li img{
     background-color: rgb(191, 191, 194);
-    height: 30px;
-    padding: 5px;
-    border-radius: 10rem;
+    height: 45px;
+    /* width: 29px; */
+    padding: 10px;
+    border-radius: 50%;
 }
 .tabpanel-images-div{
     width: 70%;
@@ -316,6 +353,7 @@ nav{
     align-items: start;
     justify-content: center;
     gap: 20px;
+    /* background-color: #007bff; */
 }
 .tabpanel-images-details h2{
     font-size: 40px;
@@ -363,6 +401,7 @@ nav{
     padding: 20px 30px;
     display: flex;
     align-items: center;
+    border-radius: 5px;
 }
 .grid-heads{
     display: flex;
@@ -693,19 +732,15 @@ footer{
         font-size: 13px;
     }
     .clients-logo{
-        /* width: 100%; */
-        flex-direction: column;
-        gap: 100px;
+        gap: 20px;
     }
-    .clients-logo img {
-        height: 35px;
+    .clients-logo img{
+        height: 20px;
     }
     .company-short-details{
         height: 77px;
     }
-    .count-details{
-        text-align: center;
-    }
+    
     .count-details span{
         font-size: 20px;
     }
@@ -713,7 +748,7 @@ footer{
         font-size: 10px;
     }
     .btn{
-        font-size: 5px;
+        font-size: 10px;
         padding: 6px 18px;
     }
     .service-data{
@@ -721,7 +756,9 @@ footer{
         padding: 10px 40px;
     }
     .service-data h2{
-        font-size: 10px;
+        font-size: 18px;
+    }.service-data h2 p{
+        font-size: 12px;
     }
     .service-intro{
         flex-direction: column;
@@ -740,10 +777,11 @@ footer{
         background-color: #2B70FA;
         border: none;
         color: #ffff;
-        font-size: 6px;
+        font-size: 10px;
     }
     .tabpannel-details{
-        align-items: center;
+        width: 50%;
+        align-items: start;
         height: 180px;
     }
     .tabpanel-images-div img {
@@ -751,12 +789,12 @@ footer{
         height: 100%;
     }
     .tabpannel-details li{
-        font-size: 10px;
+        font-size: 15px;
     }
     .tabpannel-details li img {
         background-color: rgb(191, 191, 194);
-        height: 18px;
-        padding: 2px;
+        height: 25px;
+        padding: 5px;
         border-radius: 10rem;
     }
     .tabpanel-images-div{
@@ -767,7 +805,7 @@ footer{
         width: 100%;
         align-items: center;
         text-align: center;
-        font-size: 10px;
+        font-size: 13px;
     }
     .tabpanel-images-details h2 {
         font-size: 25px;
