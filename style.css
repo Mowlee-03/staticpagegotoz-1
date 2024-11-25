@@ -1033,3 +1033,70 @@ footer{
         font-size: 10px;
     }
  }
+
+ @media (min-width: 701px) and (max-width: 1200px) {
+    .nav-links-div {
+        gap: 20px;
+    }
+    .nav-links-div a {
+        font-size: small;
+    }
+    .intro-img1 {
+        bottom: -12%;
+        left: -18%;
+        height: 255px;
+    }
+    .intro-img2{
+    bottom: -3%;
+    right: -11%;
+    height: 240px;
+    }
+    .company-details-section{
+        margin-top: 22rem;
+    }
+    .service-intro{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .tabpanel{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .tabpanel-images-div{
+        width: 100%;
+    }
+    .services-details-intro{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .services-brief-info{
+        height: auto;
+        gap: 30px;
+    }
+    .services-grid-detail{
+        height: 250px;
+    }
+    .Technology-icons-div img {
+        width: 50px;
+        height: 50px;
+    }
+    .Technology-icons-div{
+        padding: 30px;
+    }
+    .grafity-particle2{
+        height: 130px;
+    }
+    .Our-Testimonials{
+        width: 100%;
+    }
+    .detail-upper-div ul li{
+        font-size: xx-small;
+    }
+    .color-4{
+        font-size: 13px;
+        padding-top: 15px;
+    }
+    .copyright{
+        font-size: x-small;
+    }
+}

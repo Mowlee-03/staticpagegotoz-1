@@ -607,3 +607,31 @@
         }
   }
   
+
+  @media (min-width: 701px) and (max-width: 1200px) {
+    .questions-area{
+        width: 100%;
+    }
+    .q-head h4{
+        font-size: 13px;
+    }
+    .q-answer{
+        font-size: 11px;
+    }
+    .pos-img2 {
+        width: 90px;
+        height: 103px;
+        position: absolute;
+        top: 27%;
+        left: 30%;
+        z-index: 1;
+    }
+    .pos-img1 {
+        width: 80px;
+        height: 85px;
+        position: absolute;
+        bottom: 26%;
+        left: 8%;
+        z-index: 1;
+    }
+  }
